@@ -1,1 +1,0 @@
-cmd_/home/thj/work/raspberry/file/driver/hello_drv_cdev/modules.order := {   echo /home/thj/work/raspberry/file/driver/hello_drv_cdev/hello_drv.ko; :; } | awk '!x[$$0]++' - > /home/thj/work/raspberry/file/driver/hello_drv_cdev/modules.order

@@ -1,1 +1,0 @@
-cmd_/home/thj/work/raspberry/file/driver/hello_drv_cdev/hello_drv.ko := aarch64-linux-gnu-ld -r  -EL  -maarch64linux -z norelro  --build-id=sha1  -T scripts/module.lds -o /home/thj/work/raspberry/file/driver/hello_drv_cdev/hello_drv.ko /home/thj/work/raspberry/file/driver/hello_drv_cdev/hello_drv.o /home/thj/work/raspberry/file/driver/hello_drv_cdev/hello_drv.mod.o;  true

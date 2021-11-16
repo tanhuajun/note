@@ -1,5 +1,4 @@
 #include <linux/module.h>
-
 #include <linux/fs.h>
 #include <linux/errno.h>
 #include <linux/miscdevice.h>
@@ -14,7 +13,6 @@
 #include <linux/tty.h>
 #include <linux/kmod.h>
 #include <linux/gfp.h>
-
 #include "led_opr.h"
 
 
@@ -95,9 +93,4 @@ static void __exit led_exit(void) {
 module_init(led_init);
 module_exit(led_exit);
 MODULE_LICENSE("GPL");
-
-
-
-
-
 

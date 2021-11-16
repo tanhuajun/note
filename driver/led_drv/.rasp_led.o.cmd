@@ -1,1 +1,0 @@
-cmd_/home/thj/work/raspberry/file/driver/led_drv/rasp_led.o := aarch64-linux-gnu-ld  -EL  -maarch64linux -z norelro    -r -o /home/thj/work/raspberry/file/driver/led_drv/rasp_led.o /home/thj/work/raspberry/file/driver/led_drv/leddrv.o /home/thj/work/raspberry/file/driver/led_drv/raspberry_led.o
