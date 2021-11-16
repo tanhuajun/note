@@ -1,0 +1,1 @@
+cmd_/home/thj/work/raspberry/file/driver/led_drv/modules.order := {   echo /home/thj/work/raspberry/file/driver/led_drv/rasp_led.ko; :; } | awk '!x[$$0]++' - > /home/thj/work/raspberry/file/driver/led_drv/modules.order

@@ -1,0 +1,1 @@
+cmd_/home/thj/work/raspberry/file/driver/hello_drv_cdev/Module.symvers := sed 's/\.ko$$/\.o/' /home/thj/work/raspberry/file/driver/hello_drv_cdev/modules.order | scripts/mod/modpost -m -a  -o /home/thj/work/raspberry/file/driver/hello_drv_cdev/Module.symvers -e -i Module.symvers   -T -
