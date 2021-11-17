@@ -4,6 +4,7 @@
 struct led_operations {
 	int num;
 	int (*init)(int witch);
+	void (*close)(void);
 	int (*ctl)(int witch, int status);
 };
 

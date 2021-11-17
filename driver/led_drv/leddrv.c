@@ -31,6 +31,7 @@ static int led_open(struct inode *node, struct file *file) {
 
 int led_close (struct inode *node, struct file *file) {
 	printk("%s %s line %d\n", __FILE__, __FUNCTION__, __LINE__);
+	board_led_opr->close();
 	return 0;
 }
 
@@ -62,11 +63,11 @@ struct file_operations led_opr = {
 
 
 static int __init led_init(void) {
-	int i, ret;	
+	int i, ret;
 	printk("%s %s line %d\n", __FILE__, __FUNCTION__, __LINE__);
 
 	major = register_chrdev(0, "led", &led_opr);
-	
+
 	led_class = class_create(THIS_MODULE, "led_class");
 	ret = PTR_ERR(led_class);
 	if(IS_ERR(led_class)) {
@@ -75,14 +76,14 @@ static int __init led_init(void) {
 		return -1;
 	}
 	board_led_opr = get_board_led_opr();
-	
+
 	for(i=0; i<board_led_opr->num; i++)
 		device_create(led_class, NULL, MKDEV(major, i), NULL, "led%d", i);
 	return 0;
 }
 
 static void __exit led_exit(void) {
-	int i;	
+	int i;
 	printk("%s %s line %d\n", __FILE__, __FUNCTION__, __LINE__);
 	for(i=0; i<board_led_opr->num; i++)
 		device_destroy(led_class, MKDEV(major, i));
@@ -93,4 +94,9 @@ static void __exit led_exit(void) {
 module_init(led_init);
 module_exit(led_exit);
 MODULE_LICENSE("GPL");
+
+
+
+
+
 
